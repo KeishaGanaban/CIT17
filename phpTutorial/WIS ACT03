@@ -1,0 +1,11 @@
+CREATE DATABASE studentinfo;
+
+CREATE TABLE users (
+    id INT NOT NULL,
+    username VARCHAR(255),
+    email VARCHAR(255),
+    PRIMARY KEY(id)
+);
+
+INSERT INTO users(username, email)
+VALUES ("Joahn Doe", "john@example.com");

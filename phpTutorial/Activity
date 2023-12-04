@@ -1,0 +1,34 @@
+CREATE DATABASE PHPScriptDemo;
+
+CREATE TABLE Student (
+    StudentId INT PRIMARY KEY,
+    FirstName CHAR(255),
+    LastName CHAR(255),
+    DateOfBirth CHAR(255),
+    Email CHAR(255),
+    Phone INT(255)
+);
+
+CREATE TABLE Course (
+    CourseID INT PRIMARY KEY,
+    CourseName CHAR(255),
+    Credits INT(255)
+);
+
+CREATE TABLE Instructor (
+    InstructorID INT PRIMARY KEY,
+    FirstName CHAR(255),
+    LastName CHAR(255),
+    Email CHAR(255),
+    Phone INT(255)
+);
+
+CREATE TABLE Enrollment (
+    EnrollmentID INT PRIMARY Key,
+    StudnetID INT,
+    CourseID INT,
+    FOREIGN KEY (StudentId) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID),
+    EnrollmentDate CHAR(255),
+    Grade INT(255)
+);
